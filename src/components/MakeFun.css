@@ -1,0 +1,10 @@
+.make-fun-container {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px; /* Add spacing from the header */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

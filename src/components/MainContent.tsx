@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './MainContent.css';
+import './MakeFun.css';
+import MakeFun from './MakeFun';
 
 function MainContent() {
   const [aleoAddress, setAleoAddress] = useState('');
@@ -25,6 +27,9 @@ function MainContent() {
           </div>
         </div>
         <div><img src="src/assets/runningLion.gif" width={500}/></div>
+        <div className="make-fun-container">
+          <MakeFun />
+        </div>
       </div>
   );
 }
