@@ -115,6 +115,7 @@ const uploadToPinata = async (image: File) => {
   
         {/* Description Field */}
         <div>
+          <br/>
           <label>Description</label>
           <textarea {...register('description')} placeholder="Enter Description" />
           <p>{errors.description?.message}</p>
@@ -122,7 +123,7 @@ const uploadToPinata = async (image: File) => {
   
         {/* Submit Button */}
         <div>
-          <button type="submit" disabled={uploading}>
+          <button type="submit" style={{backgroundColor: '#FE8E3E'}} disabled={uploading}>
             {uploading ? 'Uploading...' : 'Submit'}
           </button>
         </div>
@@ -130,8 +131,9 @@ const uploadToPinata = async (image: File) => {
         {/* Display Uploaded URL */}
         {uploadedUrl && (
           <div>
-            <p>Image successfully uploaded:</p>
-            <a href={uploadedUrl} target="_blank" rel="noopener noreferrer">{uploadedUrl}</a>
+            <p>Zump it Up! Program Deployed:</p>
+            <img src={uploadedUrl} alt={"Image Up"} crossOrigin="anonymous"/>
+            {/*<a href={uploadedUrl} target="_blank" rel="noopener noreferrer">{uploadedUrl}</a>*/}
           </div>
         )}
       </form>
