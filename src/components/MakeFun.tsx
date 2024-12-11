@@ -66,14 +66,29 @@ const MyForm: React.FC = () => {
 
   const CreateTransaction = async (method: string, values: Array<any>, success_message: string) => {
     if (!publicKey) throw new WalletNotConnectedError();
+    console.log('values:', values);
+
+    // Make sure to ignore the first value
+    // Take the 2nd and 3rd values
+    // For each character in the string, add the byte value to a counter, then 
+    // cast it to a string and add u128 to the end. 
+    // Make the final total a BigInt
+
+    const convertedValues = values.slice(1).map((value) => {
+        let total = 0;
+        for (let i = 0; i < value.length; i++) {
+            total += value.charCodeAt(i);
+        }
+        return `${total}u128`;
+    });
+    
 
     const tx = Transaction.createTransaction(
       publicKey,
       WalletAdapterNetwork.TestnetBeta,
       "zump8_v0_1_0.aleo",
       method,
-      // values,
-      ["8247332739920914798u128","1297241166u128"],
+      convertedValues,
       42441,
       false,
     );
