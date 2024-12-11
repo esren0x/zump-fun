@@ -14,22 +14,23 @@ function MainContent() {
 
   return (
       <div className={`main-container`}>
+          <img src="src/assets/aleo.png" alt="Moving and Spinning Image" className="moving-image"/>
 
 
-        <div className="row align-items-center">
-          <img src="vendors/images/banner-img.png" alt=""/>
-          <div className="col-md-8">
-            <p className="welcome-to">
-              <img src="src/assets/Lion_8bit_04.png" width={100}/>
-              ZUMP.FUN
-              <img src="src/assets/Lion_8bit_04.png" width={100}/>
-            </p>
+          <div className="row align-items-center">
+              <img src="vendors/images/banner-img.png" alt=""/>
+              <div className="col-md-8">
+                  <p className="welcome-to">
+                      <img src="src/assets/Lion_8bit_04.png" width={100}/>
+                      ZUMP.FUN
+                      <img src="src/assets/Lion_8bit_04.png" width={100}/>
+                  </p>
+              </div>
           </div>
-        </div>
-        <div><img src="src/assets/runningLion.gif" width={500}/></div>
-        <div className="make-fun-container">
-          <MakeFun />
-        </div>
+          <div><img src="src/assets/runningLion.gif" width={500}/></div>
+          <div className="make-fun-container">
+              <MakeFun/>
+          </div>
       </div>
   );
 }

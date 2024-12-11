@@ -244,3 +244,38 @@
         transform: translateY(-10px);
     }
 }
+
+.moving-image {
+    position: absolute;
+    width: 100px; /* Size of the image */
+    height: 100px; /* Size of the image */
+    animation: moveAndSpin 5s linear infinite; /* Animation for moving and spinning */
+}
+
+@keyframes moveAndSpin {
+    0% {
+        top: 10%;
+        left: 10%;
+        transform: rotate(0deg); /* Start with no rotation */
+    }
+    25% {
+        top: 10%;
+        left: 90%;
+        transform: rotate(90deg); /* Spin 90 degrees while moving */
+    }
+    50% {
+        top: 90%;
+        left: 90%;
+        transform: rotate(180deg); /* Spin 180 degrees while moving */
+    }
+    75% {
+        top: 90%;
+        left: 10%;
+        transform: rotate(270deg); /* Spin 270 degrees while moving */
+    }
+    100% {
+        top: 10%;
+        left: 10%;
+        transform: rotate(360deg); /* Complete the rotation */
+    }
+}
