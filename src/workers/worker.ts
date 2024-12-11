@@ -38,18 +38,18 @@ async function deployProgram(program) {
   keyProvider.useCache(true);
 
   // Create a record provider that will be used to find records and transaction data for Aleo programs
-  const networkClient = new AleoNetworkClient("https://api.explorer.aleo.org/v1");
+  const networkClient = new AleoNetworkClient("https://api.explorer.provable.com/v1");
 
   // Use existing account with funds
   const account = new Account({
-    privateKey: "user1PrivateKey",
+    privateKey: "APrivateKey1zkp4SSKEuYn1zhf48Eqg5rbSwewxeUzNrNvEYmndvHMXprW",
   });
 
   const recordProvider = new NetworkRecordProvider(account, networkClient);
 
   // Initialize a program manager to talk to the Aleo network with the configured key and record providers
   const programManager = new ProgramManager(
-    "https://api.explorer.aleo.org/v1",
+    "https://api.explorer.provable.com/v1",
     keyProvider,
     recordProvider,
   );
